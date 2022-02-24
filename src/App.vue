@@ -1,27 +1,46 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <!-- <header> -->
+  <nav id="nav">
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/">Blog</router-link></li>
+      <li><router-link to="/">About</router-link></li>
+      <li><router-link to="/">Contact</router-link></li>
+    </ul>
+  </nav>
+  <!-- </header> -->
+  <router-view />
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #nav {
-  padding: 30px;
+  background-color: #2c3e50;
+  height: 75px;
+}
+
+#nav li {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  display: inline;
+  border: 3px solid black;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
