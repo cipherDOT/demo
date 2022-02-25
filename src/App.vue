@@ -22,12 +22,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background: #2bdbfa; */
+  /* background: #000000; */
 }
 
 #nav {
   height: 75px;
-  width: 100%;
+  width: 100% !important;
 }
 
 #nav h1,
@@ -39,18 +39,19 @@ li {
 
 #nav h1 {
   position: relative;
-  left: 50px;
+  left: 5%;
   margin: 20px 20px;
   width: 100px;
   text-align: center;
-  background: #2bdbfa;
+  background: #40e2ff;
   border-radius: 100vw;
 }
 
 #nav ul {
   position: relative;
   top: -50px;
-  left: 1100px;
+  left: 70%;
+  width: 100px;
 }
 
 #nav li {
@@ -60,7 +61,7 @@ li {
   display: inline;
   margin: 20px;
   color: black;
-  opacity: 0.7;
+  opacity: 0.85;
   /* border: 3px solid black; */
 }
 
@@ -69,10 +70,23 @@ li {
 }
 
 #nav a.router-link-exact-active {
+  /* color: #40e2ff; */
   color: black;
 }
 
 #nav li:hover {
   opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  #nav ul {
+    left: 70%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #nav ul {
+    left: 40%;
+  }
 }
 </style>
