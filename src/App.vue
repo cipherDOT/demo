@@ -1,6 +1,6 @@
 <template>
-  <!-- <header> -->
   <nav id="nav">
+    <h1>OFFICE</h1>
     <ul>
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/">Blog</router-link></li>
@@ -8,27 +8,49 @@
       <li><router-link to="/">Contact</router-link></li>
     </ul>
   </nav>
-  <!-- </header> -->
   <router-view />
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 #app {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: monospace, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background: #2bdbfa; */
 }
 
 #nav {
-  background-color: #2c3e50;
   height: 75px;
+  width: 100%;
+}
+
+#nav h1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+#nav h1 {
+  position: relative;
+  left: 50px;
+  margin: 20px 20px;
+  width: 100px;
+  text-align: center;
+  background: #2bdbfa;
+  border-radius: 100vw;
+}
+
+#nav ul {
+  position: relative;
+  top: -50px;
+  left: 1100px;
 }
 
 #nav li {
@@ -36,7 +58,10 @@ body {
   color: #2c3e50;
   text-decoration: none;
   display: inline;
-  border: 3px solid black;
+  margin: 20px;
+  color: black;
+  opacity: 0.7;
+  /* border: 3px solid black; */
 }
 
 #nav a {
@@ -44,6 +69,10 @@ body {
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: black;
+}
+
+#nav li:hover {
+  opacity: 1;
 }
 </style>
