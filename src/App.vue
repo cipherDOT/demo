@@ -1,6 +1,6 @@
 <template>
   <nav id="nav">
-    <h1>OFFICE</h1>
+    <h1>kreativ.</h1>
     <ul>
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/">Blog</router-link></li>
@@ -8,6 +8,27 @@
       <li><router-link to="/">Contact</router-link></li>
     </ul>
   </nav>
+  <section class="blue">
+    <h1 id="kreativ">kreativ.</h1>
+  </section>
+
+  <div class="spacer layer1"></div>
+
+  <section class="black">
+    <h1 id="kreativ">kreativ.</h1>
+  </section>
+
+  <div class="spacer layer2"></div>
+
+  <section class="magenta">
+    <h1 id="kreativ">kreativ.</h1>
+  </section>
+
+  <div class="spacer layer3"></div>
+
+  <section class="teal">
+    <h1 id="kreativ">kreativ.</h1>
+  </section>
   <router-view />
 </template>
 
@@ -22,12 +43,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background: #000000; */
+  background: rgb(19, 98, 202);
+  width: 100%;
 }
 
 #nav {
   height: 75px;
   width: 100% !important;
+  background: rgb(19, 98, 202);
 }
 
 #nav h1,
@@ -41,7 +64,7 @@ li {
   position: relative;
   left: 5%;
   margin: 20px 20px;
-  width: 100px;
+  width: 12hg0px;
   text-align: center;
   background: #40e2ff;
   border-radius: 100vw;
@@ -62,20 +85,80 @@ li {
   margin: 20px;
   color: black;
   opacity: 0.85;
-  /* border: 3px solid black; */
 }
 
 #nav a {
   text-decoration: none;
+  transition: 500ms ease;
 }
 
 #nav a.router-link-exact-active {
-  /* color: #40e2ff; */
   color: black;
 }
 
-#nav li:hover {
-  opacity: 1;
+#nav a:hover {
+  color: white;
+}
+
+section {
+  min-height: 300px;
+  padding: 100px 20vw;
+}
+
+.blue {
+  background: #1362ca;
+}
+
+.black {
+  background: #150379;
+}
+
+.magenta {
+  background: #8231ce;
+}
+
+.teal {
+  background: #0d63aa;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("./assets/layer1.svg");
+}
+
+.layer2 {
+  background-image: url("./assets/layer2.svg");
+}
+
+.layer3 {
+  background-image: url("./assets/layer3.svg");
+}
+
+#kreativ {
+  font-size: 5em;
+  text-align: center;
+  color: aliceblue;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(214, 195, 195);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(58, 58, 58);
+  border-radius: 100vw;
 }
 
 @media only screen and (max-width: 1200px) {
