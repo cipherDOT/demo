@@ -5,17 +5,23 @@
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/">Blog</router-link></li>
       <li><router-link to="/">About</router-link></li>
-      <li><router-link to="/">Contact</router-link></li>
+      <li><router-link to="/">Github</router-link></li>
     </ul>
   </nav>
   <section class="blue">
     <h1 id="kreativ">kreativ.</h1>
+    <p id="description">A team of creative minds to make amazing things.</p>
   </section>
 
   <div class="spacer layer1"></div>
 
   <section class="black">
-    <h1 id="kreativ">kreativ.</h1>
+    <h1 id="kreativ">Projects</h1>
+    <div class="cards">
+      <div class="card">Portfolio</div>
+      <div class="card">Binary Bits</div>
+      <div class="card">OpNotes</div>
+    </div>
   </section>
 
   <div class="spacer layer2"></div>
@@ -29,6 +35,14 @@
   <section class="teal">
     <h1 id="kreativ">kreativ.</h1>
   </section>
+
+  <div class="spacer layer4"></div>
+
+  <footer>
+    <i class="fa-solid fa-user"
+      ><font-awesome-icon icon="fa-brands fa-github"
+    /></i>
+  </footer>
   <router-view />
 </template>
 
@@ -64,7 +78,7 @@ li {
   position: relative;
   left: 5%;
   margin: 20px 20px;
-  width: 12hg0px;
+  width: 120px;
   text-align: center;
   background: #40e2ff;
   border-radius: 100vw;
@@ -105,6 +119,23 @@ section {
   padding: 100px 20vw;
 }
 
+#description {
+  text-align: center;
+  font-size: 2em;
+}
+
+.cards {
+  display: grid;
+  /* flex-direction: row; */
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: darkgray;
+  grid-row: 3fr;
+}
+
 .blue {
   background: #1362ca;
 }
@@ -141,12 +172,25 @@ section {
   background-image: url("./assets/layer3.svg");
 }
 
+.layer4 {
+  background-image: url("./assets/layer4.svg");
+}
+
 #kreativ {
   font-size: 5em;
   text-align: center;
   color: aliceblue;
 }
 
+footer {
+  min-height: 300px;
+  background-color: black;
+}
+
+footer > i {
+  font-size: 3em;
+  color: aliceblue;
+}
 ::-webkit-scrollbar {
   width: 1em;
 }
