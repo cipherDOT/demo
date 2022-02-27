@@ -3,11 +3,10 @@
     <h1>kreativ.</h1>
     <ul>
       <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/">Blog</router-link></li>
+      <li><router-link to="/">Projects</router-link></li>
       <li><router-link to="/">About</router-link></li>
-      <li>
-        <router-link to="/">Github</router-link>
-      </li>
+      <li><router-link to="/">Contact</router-link></li>
+      <li><router-link to="/">Github</router-link></li>
     </ul>
   </nav>
   <section class="blue">
@@ -17,7 +16,7 @@
 
   <div class="spacer layer1"></div>
 
-  <section class="black">
+  <section class="dark">
     <h1 id="kreativ">Projects</h1>
     <div class="cards">
       <div class="card one"><h1>Portfolio</h1></div>
@@ -40,11 +39,7 @@
 
   <div class="spacer layer4"></div>
 
-  <footer>
-    <i class="fa-solid fa-user"
-      ><font-awesome-icon icon="fa-brands fa-github"
-    /></i>
-  </footer>
+  <section class="black"><h1 id="kreativ">Github</h1></section>
   <router-view />
 </template>
 
@@ -90,8 +85,7 @@ li {
 #nav ul {
   position: relative;
   top: -50px;
-  left: 70%;
-  width: 100px;
+  float: right;
 }
 
 #nav li {
@@ -109,7 +103,8 @@ li {
   transition: 500ms ease;
 }
 
-#nav a.router-link-exact-active {
+#nav a.router-link-exact-active,
+a:visited {
   color: black;
 }
 
@@ -168,7 +163,7 @@ section {
   background: #1362ca;
 }
 
-.black {
+.dark {
   background: #150379;
 }
 
@@ -178,6 +173,10 @@ section {
 
 .teal {
   background: #0d63aa;
+}
+
+.black {
+  background: #000000;
 }
 
 .spacer {
