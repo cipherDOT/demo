@@ -5,7 +5,9 @@
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/">Blog</router-link></li>
       <li><router-link to="/">About</router-link></li>
-      <li><router-link to="/">Github</router-link></li>
+      <li>
+        <router-link to="/">Github</router-link>
+      </li>
     </ul>
   </nav>
   <section class="blue">
@@ -18,9 +20,9 @@
   <section class="black">
     <h1 id="kreativ">Projects</h1>
     <div class="cards">
-      <div class="card">Portfolio</div>
-      <div class="card">Binary Bits</div>
-      <div class="card">OpNotes</div>
+      <div class="card one"><h1>Portfolio</h1></div>
+      <div class="card two"><h1>Binary Bits</h1></div>
+      <div class="card three"><h1>OpNotes</h1></div>
     </div>
   </section>
 
@@ -82,6 +84,7 @@ li {
   text-align: center;
   background: #40e2ff;
   border-radius: 100vw;
+  transition: 500ms ease;
 }
 
 #nav ul {
@@ -115,7 +118,7 @@ li {
 }
 
 section {
-  min-height: 300px;
+  min-height: 200px;
   padding: 100px 20vw;
 }
 
@@ -126,14 +129,39 @@ section {
 
 .cards {
   display: grid;
-  /* flex-direction: row; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  gap: 20px;
 }
 
 .card {
-  width: 100px;
-  height: 100px;
-  background-color: darkgray;
-  grid-row: 3fr;
+  font-weight: 900;
+  padding: 60px;
+  /* border: 3px solid black; */
+  background: white;
+  color: #444;
+  border-radius: 1vw;
+}
+
+.one {
+  grid-column-end: span 2;
+}
+
+.two {
+  grid-row: 2;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.three {
+  grid-row: 3;
+  grid-column-end: span 2;
+}
+
+.card.two h1 {
+  display: flex;
+  float: right;
 }
 
 .blue {
