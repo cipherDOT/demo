@@ -31,18 +31,27 @@
   <div class="spacer layer2"></div>
 
   <section class="magenta">
-    <h1 id="kreativ">kreativ.</h1>
+    <h1 id="kreativ">About Us</h1>
+    <p id="aboutus">
+      We are a team of
+      <span id="rainbowabout">web developers and designers</span>, making the
+      web look beautiful!
+    </p>
   </section>
 
   <div class="spacer layer3"></div>
 
   <section class="teal">
-    <h1 id="kreativ">kreativ.</h1>
+    <h1 id="kreativ">Get in touch</h1>
+    <input type="text" placeholder="Enter your email..." />
   </section>
 
   <div class="spacer layer4"></div>
 
-  <section class="black"><h1 id="kreativ">Github</h1></section>
+  <section class="black">
+    <h1 id="kreativ">Github</h1>
+    <p id="whitetext">kreativ&#169; 2022</p>
+  </section>
   <router-view />
 </template>
 
@@ -133,7 +142,6 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  /* grid-template-rows: 1fr 1fr 1fr; */
   gap: 20px;
 }
 
@@ -148,7 +156,6 @@ section {
 
 .card h1 {
   width: 10em;
-  /* background: linear-gradient(90deg, white, white); */
   background: linear-gradient(90deg, black, black);
   background-size: 100% 3px;
   background-repeat: no-repeat;
@@ -240,13 +247,40 @@ section {
 }
 
 #kreativ {
-  font-size: 5em;
+  font-size: 4em;
   text-align: center;
   color: aliceblue;
-  /* background: linear-gradient(90deg, black, white);
-  background-size: 100% 3px;
+}
+
+#aboutus {
+  text-align: center;
+  font-size: 2em;
+}
+
+#rainbowabout {
+  font-weight: 900;
+  background: linear-gradient(90deg, red, blue);
+  background-size: 0% 3px;
   background-repeat: no-repeat;
-  background-position: left bottom; */
+  background-position: bottom left;
+  transition: 200ms ease;
+}
+
+#rainbowabout:hover {
+  background-size: 100% 3px;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  background: #000000b0;
+  border: none;
+  width: 30em;
+  height: 3em;
+  border-radius: 100vw;
+  color: aliceblue;
+  font-size: 1em;
+  text-align: center;
 }
 
 footer {
@@ -258,6 +292,12 @@ footer > i {
   font-size: 3em;
   color: aliceblue;
 }
+
+#whitetext {
+  color: aliceblue;
+  text-align: center;
+}
+
 ::-webkit-scrollbar {
   width: 1em;
 }
@@ -272,7 +312,7 @@ footer > i {
   border-radius: 100vw;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   #nav ul {
     left: 70%;
   }
@@ -282,5 +322,5 @@ footer > i {
   #nav ul {
     left: 40%;
   }
-}
+} */
 </style>
