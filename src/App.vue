@@ -207,6 +207,10 @@ section {
   font-size: 5em;
   text-align: center;
   color: aliceblue;
+  background: linear-gradient(90deg, black, white);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 footer {
