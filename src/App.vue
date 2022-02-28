@@ -11,7 +11,10 @@
   </nav>
   <section class="blue">
     <h1 id="kreativ">kreativ.</h1>
-    <p id="description">A team of creative minds to make amazing things.</p>
+    <p id="description">
+      A team of <span id="spanwhite">creative</span> minds to make
+      <span id="spanwhite">amazing</span> things.
+    </p>
   </section>
 
   <div class="spacer layer1"></div>
@@ -19,9 +22,9 @@
   <section class="dark">
     <h1 id="kreativ">Projects</h1>
     <div class="cards">
-      <div class="card one"><h1>Portfolio</h1></div>
-      <div class="card two"><h1>Binary Bits</h1></div>
-      <div class="card three"><h1>OpNotes</h1></div>
+      <div class="carder redblob card one"><h1>Portfolio</h1></div>
+      <div class="carder blueblob card two"><h1>Binary Bits</h1></div>
+      <div class="carder greenblob card three"><h1>OpNotes</h1></div>
     </div>
   </section>
 
@@ -122,6 +125,10 @@ section {
   font-size: 2em;
 }
 
+#spanwhite {
+  color: aliceblue;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -137,6 +144,15 @@ section {
   background: white;
   color: #444;
   border-radius: 1vw;
+}
+
+.card h1 {
+  width: 10em;
+  /* background: linear-gradient(90deg, white, white); */
+  background: linear-gradient(90deg, black, black);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .one {
@@ -187,6 +203,26 @@ section {
   background-size: cover;
 }
 
+.carder {
+  aspect-ratio: 16/4;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.redblob {
+  background-image: url("./assets/red_blob.svg");
+}
+
+.blueblob {
+  background-image: url("./assets/blue_blob.svg");
+}
+
+.greenblob {
+  background-image: url("./assets/green_blob.svg");
+}
+
 .layer1 {
   background-image: url("./assets/layer1.svg");
 }
@@ -207,10 +243,10 @@ section {
   font-size: 5em;
   text-align: center;
   color: aliceblue;
-  background: linear-gradient(90deg, black, white);
+  /* background: linear-gradient(90deg, black, white);
   background-size: 100% 3px;
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left bottom; */
 }
 
 footer {
