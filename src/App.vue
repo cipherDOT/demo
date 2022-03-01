@@ -146,20 +146,14 @@ section {
 }
 
 .card {
+  min-width: 100px;
   font-weight: 900;
-  padding: 60px;
+  /* padding: 60px; */
+  padding: 3em;
   /* border: 3px solid black; */
   background: white;
   color: #444;
   border-radius: 1vw;
-}
-
-.card h1 {
-  width: 10em;
-  background: linear-gradient(90deg, black, black);
-  background-size: 100% 3px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
 }
 
 .one {
@@ -180,6 +174,14 @@ section {
 .card.two h1 {
   display: flex;
   float: right;
+}
+
+.card h1 {
+  width: 10em;
+  background: linear-gradient(90deg, black, black);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .blue {
@@ -275,7 +277,7 @@ input {
   margin: 0 auto;
   background: #000000b0;
   border: none;
-  width: 30em;
+  width: 70%;
   height: 3em;
   border-radius: 100vw;
   color: aliceblue;
@@ -312,15 +314,27 @@ footer > i {
   border-radius: 100vw;
 }
 
-/* @media only screen and (max-width: 1200px) {
-  #nav ul {
-    left: 70%;
+@media (max-width: 701px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .one {
+    grid-row-start: 1;
+  }
+
+  .two {
+    grid-row-start: 2;
+  }
+
+  .three {
+    grid-row-start: 3;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
-
-@media only screen and (max-width: 900px) {
-  #nav ul {
-    left: 40%;
-  }
-} */
 </style>
