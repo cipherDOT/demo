@@ -51,6 +51,7 @@
   <section class="black">
     <h1 id="kreativ">Github</h1>
     <p id="whitetext">kreativ&#169; 2022</p>
+    <fa icon="coffee" />
   </section>
   <router-view />
 </template>
@@ -298,6 +299,10 @@ footer > i {
 #whitetext {
   color: aliceblue;
   text-align: center;
+}
+
+fa {
+  color: white;
 }
 
 ::-webkit-scrollbar {
