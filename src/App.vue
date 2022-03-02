@@ -103,8 +103,7 @@ li {
   margin: 20px 20px;
   width: 120px;
   text-align: center;
-  /* background: #40e2ff; */
-  background: black;
+  background: #40e2ff;
   border-radius: 100vw;
   transition: 500ms ease;
 }
