@@ -119,7 +119,7 @@ li {
   color: #2c3e50;
   text-decoration: none;
   display: inline;
-  margin: 20px;
+  margin: 2em;
   color: black;
   opacity: 0.85;
 }
@@ -346,7 +346,7 @@ input {
 
 #copyright {
   color: aliceblue;
-  margin: 5px 0px 0px 0px;
+  padding: 2px 0px 0px 0px;
 }
 
 ::-webkit-scrollbar {
@@ -363,7 +363,112 @@ input {
   border-radius: 100vw;
 }
 
-@media only screen and (max-width: 701px) {
+@media only screen and (max-width: 949px) {
+  #nav h1 {
+    position: relative;
+    left: 5%;
+    font-size: 1em;
+    margin: 20px 0px;
+    width: 100px;
+    text-align: center;
+    background: #40e2ff;
+    border-radius: 100vw;
+    transition: 500ms ease;
+  }
+
+  #nav ul {
+    position: relative;
+    top: -50px;
+    float: right;
+  }
+
+  #nav li {
+    font-size: 0.75em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline;
+    margin: 1em;
+    color: black;
+    opacity: 0.85;
+  }
+
+  .cards {
+    position: relative;
+    left: -3em;
+  }
+
+  .card {
+    width: 100%;
+    font-weight: 900;
+    padding: 3em;
+    color: #444;
+    border-radius: 1vw;
+  }
+
+  .one {
+    grid-row-start: 1;
+    grid-column-end: span 3;
+  }
+
+  .two {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+
+  }
+
+  .three {
+    grid-row-start: 3;
+    grid-column-end: span 3;
+
+  }
+
+  .card.two h1 {
+    display: flex;
+    float: left;
+  }
+
+  .icon {
+    color: aliceblue;
+    font-size: 1.5em;
+    margin: 3px 1em 3px 0em;
+    transition: 200ms ease;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+
+  #nav h1 {
+    position: relative;
+    left: 5%;
+    font-size: 1em;
+    margin: 20px 0px;
+    width: 100px;
+    text-align: center;
+    background: #40e2ff;
+    border-radius: 100vw;
+    transition: 500ms ease;
+  }
+
+  #nav ul {
+    position: relative;
+    top: -50px;
+    float: right;
+  }
+
+  #nav li {
+    font-size: 0.75em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline;
+    margin: 0.7em;
+    color: black;
+    opacity: 0.85;
+  }
 
   .cards {
     position: relative;
