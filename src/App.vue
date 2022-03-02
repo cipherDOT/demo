@@ -6,7 +6,7 @@
       <li><router-link to="/">Projects</router-link></li>
       <li><router-link to="/">About</router-link></li>
       <li><router-link to="/">Contact</router-link></li>
-      <li><router-link to="/">Github</router-link></li>
+      <li><router-link to="/"><fa class="basic" :icon="[ 'fab', 'github' ]"></fa></router-link></li>
     </ul>
   </nav>
   <section class="blue">
@@ -43,18 +43,31 @@
 
   <section class="teal">
     <h1 id="kreativ">Get in touch</h1>
-    <input type="text" placeholder="Enter your email..." />
+    <form action="submit">
+      <input type="email" placeholder="Enter your email..." />
+    </form>
   </section>
 
   <div class="spacer layer4"></div>
 
-  <section class="black">
-    <h1 id="kreativ">Github</h1>
-    <p id="whitetext">kreativ&#169; 2022</p>
-    <fa icon="coffee" />
+  <section id="footer" class="black">
+    <div class="links">
+      <h1 id="link">Links</h1>
+      <fa id="github" class="icon" :icon="[ 'fab', 'github' ]"></fa>
+      <fa id="youtube" class="icon" :icon="[ 'fab', 'youtube' ]"></fa>
+      <fa id="instagram" class="icon" :icon="[ 'fab', 'instagram' ]"></fa>
+      <fa id="twitter" class="icon" :icon="[ 'fab', 'twitter' ]"></fa>
+    </div>
+    <p id="copyright">&#169; Team Kreativ. , kreativ&#8482; 2022</p>
   </section>
   <router-view />
 </template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
@@ -149,10 +162,7 @@ section {
 .card {
   min-width: 100px;
   font-weight: 900;
-  /* padding: 60px; */
   padding: 3em;
-  /* border: 3px solid black; */
-  background: white;
   color: #444;
   border-radius: 1vw;
 }
@@ -203,6 +213,7 @@ section {
 
 .black {
   background: #000000;
+  /* background: #ffffff; */
 }
 
 .spacer {
@@ -286,23 +297,56 @@ input {
   text-align: center;
 }
 
-footer {
-  min-height: 300px;
+#footer {
+  height: 200px;
+  text-align: left;
   background-color: black;
 }
 
-footer > i {
-  font-size: 3em;
-  color: aliceblue;
-}
-
 #whitetext {
-  color: aliceblue;
+  color: white;
   text-align: center;
 }
 
-fa {
-  color: white;
+.basic {
+  font-size: 24px;
+}
+
+.links {
+  float: top;
+}
+
+#link {
+  color: aliceblue;
+  font-size: 4em;
+}
+
+.icon {
+  color: aliceblue;
+  font-size: 2em;
+  margin: 3px 2em 3px 0em;
+  transition: 200ms ease;
+}
+
+#github:hover {
+  color: rgb(255, 255, 255);
+}
+
+#youtube:hover {
+  color: rgb(255, 0, 0);
+}
+
+#instagram:hover {
+  color: rgb(223, 95, 255);
+}
+
+#twitter:hover {
+  color: rgb(12, 130, 233);
+}
+
+#copyright {
+  color: aliceblue;
+  margin: 5px 0px 0px 0px;
 }
 
 ::-webkit-scrollbar {
@@ -319,23 +363,42 @@ fa {
   border-radius: 100vw;
 }
 
-@media (max-width: 701px) {
+@media only screen and (max-width: 701px) {
+
   .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+    left: -3em;
+  }
+
+  .card {
+    width: 100%;
+    font-weight: 900;
+    padding: 3em;
+    color: #444;
+    border-radius: 1vw;
   }
 
   .one {
     grid-row-start: 1;
+    grid-column-end: span 3;
   }
 
   .two {
     grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+
   }
 
   .three {
     grid-row-start: 3;
+    grid-column-end: span 3;
+
+  }
+
+  .card.two h1 {
+    display: flex;
+    float: left;
   }
 
   ::-webkit-scrollbar {
