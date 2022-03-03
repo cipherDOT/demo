@@ -588,6 +588,12 @@ input {
     font-size: 14px;
   }
 
+  #copyright {
+    font-size: 0.8em;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
   ::-webkit-scrollbar {
     display: none;
   }
