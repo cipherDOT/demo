@@ -1,4 +1,5 @@
 <template>
+  <meta name="theme-color" content="#1362ca">
   <nav id="nav">
     <h1>kreativ.</h1>
     <ul>
@@ -6,7 +7,7 @@
       <li><router-link to="/">Projects</router-link></li>
       <li><router-link to="/">About</router-link></li>
       <li><router-link to="/">Contact</router-link></li>
-      <li><router-link to="/"><fa class="basic" :icon="[ 'fab', 'github' ]"></fa></router-link></li>
+      <li><a href="https://www.github.com/cipherDOT" target="_blank"><fa class="basic" :icon="[ 'fab', 'github' ]"></fa></a></li>
     </ul>
   </nav>
   <section class="blue">
@@ -65,7 +66,17 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'en-US'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'theme-color', content: '#1362ca' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    ]
+  }
 }
 </script>
 
@@ -129,8 +140,11 @@ li {
   transition: 500ms ease;
 }
 
-#nav a.router-link-exact-active,
-a:visited {
+#nav a.router-link-exact-active {
+  color: black;
+}
+
+#nav a {
   color: black;
 }
 
