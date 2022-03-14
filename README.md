@@ -1,4 +1,4 @@
 # kreativ. web dev startup
 
-contact us at: @kreativ_web
-visit site   : kreativdemo.netlify.app
+<span>contact us at: @kreativ_web</span>
+<span>visit site   : kreativdemo.netlify.app</span>
