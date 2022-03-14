@@ -67,15 +67,8 @@
 <script>
 export default {
   name: 'App',
-  metaInfo: {
-    htmlAttrs: {
-      lang: 'en-US'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'theme-color', content: '#1362ca' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    ]
+  created () {
+    document.title = 'kreativ.'
   }
 }
 </script>
