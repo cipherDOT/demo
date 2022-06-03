@@ -3,10 +3,10 @@
   <nav id="nav">
     <h1>kreativ.</h1>
     <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/">Projects</router-link></li>
-      <li><router-link to="/">About</router-link></li>
-      <li><router-link to="/">Contact</router-link></li>
+      <li><router-link to="#home">Home</router-link></li>
+      <li><router-link to="#projects">Projects</router-link></li>
+      <li><router-link to="#about">About</router-link></li>
+      <li><router-link to="#contact">Contact</router-link></li>
       <li><a href="https://www.github.com/cipherDOT" target="_blank"><fa class="basic" :icon="[ 'fab', 'github' ]"></fa></a></li>
     </ul>
   </nav>
