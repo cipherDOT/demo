@@ -10,7 +10,7 @@
       <li><a href="https://www.github.com/cipherDOT" target="_blank"><fa class="basic" :icon="[ 'fab', 'github' ]"></fa></a></li>
     </ul>
   </nav>
-  <section class="blue">
+  <section class="blue" id="home">
     <h1 id="kreativ">kreativ.</h1>
     <p id="description">
       A team of <span id="spanwhite">creative</span> minds to make
@@ -20,7 +20,7 @@
 
   <div class="spacer layer1"></div>
 
-  <section class="dark">
+  <section class="dark" id="projects">
     <h1 id="kreativ">Projects</h1>
     <div class="cards">
       <div class="carder redblob card one"><h1>Portfolio</h1></div>
@@ -31,7 +31,7 @@
 
   <div class="spacer layer2"></div>
 
-  <section class="magenta">
+  <section class="magenta" id="about">
     <h1 id="kreativ">About Us</h1>
     <p id="aboutus">
       We are a team of
@@ -40,7 +40,7 @@
     </p>
   </section>
 
-  <div class="spacer layer3"></div>
+  <div class="spacer layer3" id="contact"></div>
 
   <section class="teal">
     <h1 id="kreativ">Get in touch</h1>
